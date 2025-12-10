@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elf Hopper: Tacky 2025 '90s Xmas Platformer!</title>
+    <style>
+        body { margin: 0; background: #111; color: #ff0; font-family: 'Courier New', monospace; overflow: hidden; }
+        canvas { display: block; image-rendering: pixelated; border: 3px ridge #f0f; } /* 90s CRT glow */
+        #ui { position: absolute; top: 10px; left: 10px; font-size: 18px; text-shadow: 0 0 5px #0ff; }
+        #win { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; color: #f00; text-align: center; display: none; background: rgba(0,0,0,0.8); padding: 50px; border: 5px double #0f0; }
+    </style>
+</head>
+<body>
+    <canvas id="game" width="800" height="500"></canvas>
+    <div id="ui">←→ Move | ↑ Jump | Canes: <span id="score">0</span>/10 | CEO: Kim Mahan – Learning Live! 🎄</div>
+    <div id="win">🎉 HO HO VICTORY! 🎉<br>Tacky 2025 Winner!</div>
+    <script src="game.js"></script>
+</body>
+</html>
+
