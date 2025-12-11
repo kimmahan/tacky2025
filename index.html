@@ -2,6 +2,42 @@
 <html>
 <head>
     <title>Grandma Kim's 90s Holiday Arcade</title>
+    <!-- Add this right after your title -->
+<div style="background: linear-gradient(to bottom, #666, #333); padding: 15px; border: 3px outset #999; margin: 20px auto; max-width: 400px; font-family: 'Comic Sans MS', cursive;">
+    <div style="background: #000; color: #0f0; padding: 10px; font-family: 'Courier New', monospace; margin-bottom: 10px; text-align: center;">
+      🎵 Now Playing: <span id="trackName">None</span> 🎵
+    </div>
+    
+    <audio id="player" loop></audio>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+      <button onclick="playTrack('TeenSpirit.mp3', 'Teen Spirit')" style="background: red; color: white; border: 2px outset; padding: 8px; cursor: pointer; font-family: 'Comic Sans MS';">🎅 Jingle Bells</button>
+      
+      <button onclick="playTrack('Pac_California.mp3', 'California')" style="background: green; color: white; border: 2px outset; padding: 8px; cursor: pointer; font-family: 'Comic Sans MS';">🎄 Deck Halls</button>
+      
+      <button onclick="playTrack('JingleBellRock.mp3', 'Jingle Bell Rock')" style="background: blue; color: white; border: 2px outset; padding: 8px; cursor: pointer; font-family: 'Comic Sans MS';">🔔 Carol Bells</button>
+      
+      <button onclick="stopMusic()" style="background: #666; color: white; border: 2px outset; padding: 8px; cursor: pointer; font-family: 'Comic Sans MS';">⏹️ STOP</button>
+    </div>
+  </div>
+  
+  <script>
+  function playTrack(filename, name) {
+    const player = document.getElementById('player');
+    const trackName = document.getElementById('trackName');
+    player.src = filename;
+    player.play();
+    trackName.textContent = name;
+  }
+  
+  function stopMusic() {
+    const player = document.getElementById('player');
+    const trackName = document.getElementById('trackName');
+    player.pause();
+    player.currentTime = 0;
+    trackName.textContent = 'None';
+  }
+  </script>
     <style>
         body {
             background: url('nirvana-bg.jpg') fixed;
